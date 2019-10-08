@@ -18,6 +18,31 @@ public class Movie implements Serializable {
     private  int voteAverage;
     private int voteCount;
 
+    /**
+    * Intended only for debugging.
+    *
+    * <P>Here, the contents of every field are placed into the result.
+    */
+    @Override
+    public String toString() {
+        StringBuilder result = new StringBuilder();
+    
+        result.append("{");
+        result.append("\"Id\":" + id);
+        result.append(",\"BackdropPath\":" + backdropPath);
+        result.append(",\"PosterPath\":" + posterPath);
+        result.append(",\"Title\":" + title);
+        result.append(",\"OriginalTitle\":" + originalTitle);
+        result.append(",\"Overview\":" + overview);
+        result.append(",\"ReleaseDate\":" + releaseDate);
+        result.append(",\"Popularity\":" + popularity);
+        result.append(",\"VoteAverage\":" + voteAverage);
+        result.append(",\"VoteCount\":" + voteCount);
+        result.append(",}");
+
+        return result.toString();
+    }
+    
     public int getVoteCount() {
         return voteCount;
     }
